@@ -1,7 +1,7 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     text-align: center;
-    margin: 0;
+    margin: 20px;
     padding: 0;
     background-color: #f9f9f9;
     color: #333;
@@ -11,6 +11,7 @@ h1 {
     margin-top: 20px;
     font-size: 2.5em;
     color: #444;
+    text-align: center;
 }
 
 #controls {
@@ -19,7 +20,10 @@ h1 {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
     width: 90%;
     max-width: 500px;
 }
@@ -29,6 +33,7 @@ h1 {
     margin-bottom: 8px;
     font-size: 1em;
     color: #555;
+    margin-right: 10px;
 }
 
 #controls input,
@@ -43,16 +48,46 @@ h1 {
     box-sizing: border-box;
 }
 
+
+input[type="time"],
+input[type="date"],
+select {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+}
+
 #controls button {
     background-color: #4CAF50;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
 }
 
 #controls button:hover {
     background-color: #45a049;
 }
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
 
 .clock {
     margin: 20px auto;
@@ -62,6 +97,9 @@ h1 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 500px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
 }
 
 .clock label {
