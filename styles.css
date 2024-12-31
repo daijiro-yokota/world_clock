@@ -45,6 +45,11 @@ h1 {
     box-sizing: border-box;
 }
 
+.input-group input,
+.input-group select {
+    width: 200px; /* Set a fixed width */
+}
+
 input[type="time"],
 input[type="date"],
 select {
@@ -83,7 +88,6 @@ button {
 button:hover {
     background-color: gray;
 }
-
 
 .clock {
     margin: 20px auto;
