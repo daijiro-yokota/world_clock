@@ -11,40 +11,44 @@
 
     <div id="controls">
         <div class="input-group">
-            <label for="input-time">Select Time:</label>
+            <label for="input-time">Set Time (HH:MM):</label>
             <input type="time" id="input-time">
         </div>
 
         <div class="input-group">
-            <label for="input-date">Select Date:</label>
+            <label for="input-date">Set Date:</label>
             <input type="date" id="input-date">
         </div>
 
-        <div class="input-group">
-            <label for="input-city1">Select City 1:</label>
-            <select id="input-city1">
-                <option value="America/New_York">New York</option>
-                <option value="Asia/Tokyo">Tokyo</option>
-                <option value="Europe/London">London</option>
-                <option value="Europe/Paris">Paris</option>
-                <option value="Australia/Sydney">Sydney</option>
-            </select>
-        </div>
+        <label for="input-city1">Select City 1:</label>
+        <select id="input-city1">
+            <option value="America/New_York">New York</option>
+            <option value="Asia/Tokyo">Tokyo</option>
+            <option value="Europe/London">London</option>
+            <option value="Europe/Paris">Paris</option>
+            <option value="Australia/Sydney">Sydney</option>
+        </select>
 
-        <div class="input-group">
-            <label for="input-city2">Select City 2:</label>
-            <select id="input-city2">
-                <option value="America/New_York">New York</option>
-                <option value="Asia/Tokyo">Tokyo</option>
-                <option value="Europe/London">London</option>
-                <option value="Europe/Paris">Paris</option>
-                <option value="Australia/Sydney">Sydney</option>
-            </select>
-        </div>
+        <label for="input-city2">Select City 2:</label>
+        <select id="input-city2">
+            <option value="America/New_York">New York</option>
+            <option value="Asia/Tokyo">Tokyo</option>
+            <option value="Europe/London">London</option>
+            <option value="Europe/Paris">Paris</option>
+            <option value="Australia/Sydney">Sydney</option>
+        </select>
 
         <button onclick="updateTimes()">Update Times</button>
     </div>
 
+    <div class="clock">
+        <label>New York Time:</label>
+        <span id="time1"></span>
+    </div>
+    <div class="clock">
+        <label>Tokyo Time:</label>
+        <span id="time2"></span>
+    </div>
     <div class="clock">
         <label>City 1 Time:</label>
         <span id="time1"></span>
