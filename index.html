@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World Clock</title>
+    <title>World Time Checker</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Dynamic World Clock</h1>
+    <h1>World Clock</h1>
 
     <div id="controls">
         <div class="input-group">
@@ -21,36 +21,24 @@
         </div>
 
         <div class="input-group">
-            <label for="input-city1">Select City 1:</label>
-            <select id="input-city1">
-                <option value="America/New_York">New York</option>
-                <option value="Asia/Tokyo">Tokyo</option>
-                <option value="Europe/London" selected>London</option>
-                <option value="Europe/Paris">Paris</option>
-                <option value="Australia/Sydney">Sydney</option>
-            </select>
+            <label>Your City:</label>
+            <span id="static-city">Detecting...</span>
         </div>
 
         <div class="input-group">
-            <label for="input-city2">Select City 2:</label>
-            <select id="input-city2">
-                <option value="America/New_York" selected>New York</option>
-                <option value="Asia/Tokyo">Tokyo</option>
-                <option value="Europe/London">London</option>
-                <option value="Europe/Paris">Paris</option>
-                <option value="Australia/Sydney">Sydney</option>
-            </select>
+            <label for="input-city2">Their City:</label>
+            <select id="input-city2"></select>
         </div>
 
-        <button onclick="updateTimes()">Update Times</button>
+        <button onclick="updateTimes()">Check Time</button>
     </div>
 
     <div class="clock">
-        <label>City 1 Time:</label>
+        <label>Your Time:</label>
         <span id="time1"></span>
     </div>
     <div class="clock">
-        <label>City 2 Time:</label>
+        <label>Their Time:</label>
         <span id="time2"></span>
     </div>
 

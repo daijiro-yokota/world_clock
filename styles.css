@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial Light', 'Helvetica Light', sans-serif;
     text-align: center;
     margin: 20px;
     padding: 0;
@@ -38,6 +38,7 @@ h1 {
     margin-bottom: 5px;
     font-size: 1em;
     color: #555;
+    font-weight: lighter;
 }
 
 #controls .input-group:nth-child(1),
@@ -84,7 +85,7 @@ select {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 200px;
+    width: 250px;
 }
 
 #controls button {
@@ -126,21 +127,21 @@ button:hover {
     max-width: 500px;
     margin-top: 20px;
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .clock label {
     font-size: 1.2em;
-    font-weight: bold;
+    font-weight: lighter;
     color: #444;
 }
 
 .clock span {
     display: block;
     margin-top: 10px;
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: #333;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 @media (max-width: 600px) {
