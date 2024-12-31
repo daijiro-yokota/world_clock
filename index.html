@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Time Zones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Dynamic Time Zones</h1>
+
+    <div id="controls">
+        <label for="input-time">Set Time (HH:MM):</label>
+        <input type="time" id="input-time">
+
+        <label for="input-date">Set Date:</label>
+        <input type="date" id="input-date">
+
+        <button onclick="updateTimes()">Update Times</button>
+    </div>
+
+    <div class="clock" id="clock1">
+        <label>Clock 1 (New York):</label>
+        <span id="time1">--:--</span>
+    </div>
+
+    <div class="clock" id="clock2">
+        <label>Clock 2 (Tokyo):</label>
+        <span id="time2">--:--</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

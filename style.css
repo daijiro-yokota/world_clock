@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+.clock {
+    margin: 20px 0;
+}
+
+.clock label {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.clock span {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#controls {
+    margin: 30px 0;
+}
