@@ -60,7 +60,7 @@ select {
 }
 
 #controls button {
-    background-color: #4CAF50;
+    background-color: gray;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -71,13 +71,13 @@ select {
 }
 
 #controls button:hover {
-    background-color: #45a049;
+    background-color: gray;
 }
 
 button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #4CAF50;
+    background-color: gray;
     color: white;
     border: none;
     border-radius: 4px;
@@ -85,7 +85,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: gray;
 }
 
 
