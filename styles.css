@@ -76,6 +76,7 @@ h1 {
     border-radius: 4px;
     font-size: 1em;
     box-sizing: border-box;
+    font-family: 'Arial Light', 'Helvetica Light', sans-serif;
 }
 
 input[type="time"],
