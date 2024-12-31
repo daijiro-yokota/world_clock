@@ -1,3 +1,16 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const inputTime = document.getElementById("input-time");
+    const inputDate = document.getElementById("input-date");
+
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, "0");
+    const minutes = String(now.getMinutes()).padStart(2, "0");
+    const date = now.toISOString().split("T")[0];
+
+    inputTime.value = `${hours}:${minutes}`;
+    inputDate.value = date;
+});
+
 function updateTimes() {
     const inputTime = document.getElementById("input-time").value;
     const inputDate = document.getElementById("input-date").value;
