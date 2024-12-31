@@ -75,23 +75,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Parse the input time and date
         const selectedDate = new Date(`${inputDate}T${inputTime}:00`);
-        console.log("Selected Date:", selectedDate);
 
         // Calculate time for two cities
         const timeCity1 = new Date(selectedDate.toLocaleString("en-US", { timeZone: userTimeZone }));
         const timeCity2 = new Date(selectedDate.toLocaleString("en-US", { timeZone: inputCity2 }));
-        console.log("Time in User's Time Zone:", timeCity1);
-        console.log("Time in Selected City:", timeCity2);
 
         // Format times and dates for display
         const timeOptions = { hour: "2-digit", minute: "2-digit" };
-        const formattedTimeCity1 = timeCity1.toLocaleTimeString("en-US", timeOptions);
-        const formattedTimeCity2 = timeCity2.toLocaleTimeString("en-US", timeOptions);
-        console.log("Formatted Time in User's Time Zone:", formattedTimeCity1);
-        console.log("Formatted Time in Selected City:", formattedTimeCity2);
+        const dateOptions = { weekday: "long", year: "numeric", month: "2-digit", day: "2-digit" };
+        const timeCity1Formatted = timeCity1.toLocaleTimeString("en-US", timeOptions);
+        const dateCity1Formatted = timeCity1.toLocaleDateString("en-US", dateOptions);
+        const timeCity2Formatted = timeCity2.toLocaleTimeString("en-US", timeOptions);
+        const dateCity2Formatted = timeCity2.toLocaleDateString("en-US", dateOptions);
 
-        // Display the times
-        document.getElementById("time-city1").textContent = formattedTimeCity1;
-        document.getElementById("time-city2").textContent = formattedTimeCity2;
+        // Update the clocks and dates
+        document.getElementById("time1").textContent = `${timeCity1Formatted} - ${dateCity1Formatted}`;
+        document.getElementById("time2").textContent = `${timeCity2Formatted} - ${dateCity2Formatted}`;
     };
 });
