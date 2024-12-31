@@ -16,6 +16,7 @@ function updateTimes() {
     const inputDate = document.getElementById("input-date").value;
     const inputCity1 = document.getElementById("input-city1").value;
     const inputCity2 = document.getElementById("input-city2").value;
+    const inputCity3 = document.getElementById("input-city3").value;
 
     if (!inputTime || !inputDate || !inputCity1 || !inputCity2) {
         alert("Please set time, date, and both cities.");
@@ -24,23 +25,18 @@ function updateTimes() {
 
     // Parse the input time and date
     const selectedDate = new Date(`${inputDate}T${inputTime}:00`);
-
-    // Calculate time for New York (UTC-5) and Tokyo (UTC+9)
-    const timeNY = new Date(selectedDate.toLocaleString("en-US", { timeZone: "America/New_York" }));
-    const timeTokyo = new Date(selectedDate.toLocaleString("en-US", { timeZone: "Asia/Tokyo" }));
     const timeCity1 = new Date(selectedDate.toLocaleString("en-US", { timeZone: inputCity1 }));
     const timeCity2 = new Date(selectedDate.toLocaleString("en-US", { timeZone: inputCity2 }));
+    const timeCity3 = new Date(selectedDate.toLocaleString("en-US", { timeZone: inputCity3 }));
 
     // Format times for display
     const options = { hour: "2-digit", minute: "2-digit", timeZoneName: "short" };
-    const timeNYFormatted = timeNY.toLocaleTimeString("en-US", options);
-    const timeTokyoFormatted = timeTokyo.toLocaleTimeString("en-US", options);
     const timeCity1Formatted = timeCity1.toLocaleTimeString("en-US", options);
     const timeCity2Formatted = timeCity2.toLocaleTimeString("en-US", options);
+    const timeCity3Formatted = timeCity3.toLocaleTimeString("en-US", options);
 
     // Update the clocks
-    document.getElementById("time1").textContent = timeNYFormatted;
-    document.getElementById("time2").textContent = timeTokyoFormatted;
-    document.getElementById("time3").textContent = timeCity1Formatted;
-    document.getElementById("time4").textContent = timeCity2Formatted;
+    document.getElementById("time1").textContent = timeCity1Formatted;
+    document.getElementById("time2").textContent = timeCity2Formatted;
+    document.getElementById("time3").textContent = timeCity3Formatted;
 }

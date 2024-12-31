@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Time Zones</title>
+    <title>World Clock</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Dynamic Time Zones</h1>
+    <h1>Dynamic World Clock</h1>
 
     <div id="controls">
         <div class="input-group">
-            <label for="input-time">Set Time (HH:MM):</label>
+            <label for="input-time">Select Time:</label>
             <input type="time" id="input-time">
         </div>
 
         <div class="input-group">
-            <label for="input-date">Set Date:</label>
+            <label for="input-date">Select Date:</label>
             <input type="date" id="input-date">
         </div>
 
@@ -42,16 +42,31 @@
             </select>
         </div>
 
+        <div class="input-group">
+            <label for="input-city3">Select City 3:</label>
+            <select id="input-city3">
+                <option value="America/New_York">New York</option>
+                <option value="Asia/Tokyo">Tokyo</option>
+                <option value="Europe/London">London</option>
+                <option value="Europe/Paris">Paris</option>
+                <option value="Australia/Sydney">Sydney</option>
+            </select>
+        </div>
+
         <button onclick="updateTimes()">Update Times</button>
     </div>
 
     <div class="clock">
         <label>City 1 Time:</label>
-        <span id="time3"></span>
+        <span id="time1"></span>
     </div>
     <div class="clock">
         <label>City 2 Time:</label>
-        <span id="time4"></span>
+        <span id="time2"></span>
+    </div>
+    <div class="clock">
+        <label>City 3 Time:</label>
+        <span id="time3"></span>
     </div>
 
     <script src="script.js"></script>
