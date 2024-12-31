@@ -25,6 +25,11 @@ function updateTimes() {
 
     // Parse the input time and date
     const selectedDate = new Date(`${inputDate}T${inputTime}:00`);
+<<<<<<< Updated upstream
+=======
+
+    // Calculate time for two cities
+>>>>>>> Stashed changes
     const timeCity1 = new Date(selectedDate.toLocaleString("en-US", { timeZone: inputCity1 }));
     const timeCity2 = new Date(selectedDate.toLocaleString("en-US", { timeZone: inputCity2 }));
     const timeCity3 = new Date(selectedDate.toLocaleString("en-US", { timeZone: inputCity3 }));
@@ -38,5 +43,9 @@ function updateTimes() {
     // Update the clocks
     document.getElementById("time1").textContent = timeCity1Formatted;
     document.getElementById("time2").textContent = timeCity2Formatted;
+<<<<<<< Updated upstream
     document.getElementById("time3").textContent = timeCity3Formatted;
 }
+=======
+}
+>>>>>>> Stashed changes
