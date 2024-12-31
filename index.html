@@ -20,23 +20,27 @@
             <input type="date" id="input-date">
         </div>
 
-        <label for="input-city1">Select City 1:</label>
-        <select id="input-city1">
-            <option value="America/New_York">New York</option>
-            <option value="Asia/Tokyo">Tokyo</option>
-            <option value="Europe/London">London</option>
-            <option value="Europe/Paris">Paris</option>
-            <option value="Australia/Sydney">Sydney</option>
-        </select>
+        <div class="input-group">
+            <label for="input-city1">Select City 1:</label>
+            <select id="input-city1">
+                <option value="America/New_York">New York</option>
+                <option value="Asia/Tokyo">Tokyo</option>
+                <option value="Europe/London">London</option>
+                <option value="Europe/Paris">Paris</option>
+                <option value="Australia/Sydney">Sydney</option>
+            </select>
+        </div>
 
-        <label for="input-city2">Select City 2:</label>
-        <select id="input-city2">
-            <option value="America/New_York">New York</option>
-            <option value="Asia/Tokyo">Tokyo</option>
-            <option value="Europe/London">London</option>
-            <option value="Europe/Paris">Paris</option>
-            <option value="Australia/Sydney">Sydney</option>
-        </select>
+        <div class="input-group">
+            <label for="input-city2">Select City 2:</label>
+            <select id="input-city2">
+                <option value="America/New_York">New York</option>
+                <option value="Asia/Tokyo">Tokyo</option>
+                <option value="Europe/London">London</option>
+                <option value="Europe/Paris">Paris</option>
+                <option value="Australia/Sydney">Sydney</option>
+            </select>
+        </div>
 
         <button onclick="updateTimes()">Update Times</button>
     </div>
@@ -47,14 +51,6 @@
     </div>
     <div class="clock">
         <label>Tokyo Time:</label>
-        <span id="time2"></span>
-    </div>
-    <div class="clock">
-        <label>City 1 Time:</label>
-        <span id="time1"></span>
-    </div>
-    <div class="clock">
-        <label>City 2 Time:</label>
         <span id="time2"></span>
     </div>
 
