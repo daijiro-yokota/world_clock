@@ -16,13 +16,12 @@ function updateTimes() {
     const inputDate = document.getElementById("input-date").value;
     const inputCity = document.getElementById("input-city").value;
 
-    if (!inputTime || !inputDate) {
-        alert("Please set both time and date.");
+    if (!inputTime || !inputDate || !inputCity) {
+        alert("Please set time, date, and city.");
         return;
     }
 
     // Parse the input time and date
-    const [hours, minutes] = inputTime.split(":").map(Number);
     const selectedDate = new Date(`${inputDate}T${inputTime}:00`);
 
     // Calculate time for New York (UTC-5) and Tokyo (UTC+9)
@@ -39,5 +38,5 @@ function updateTimes() {
     // Update the clocks
     document.getElementById("time1").textContent = timeNYFormatted;
     document.getElementById("time2").textContent = timeTokyoFormatted;
-    alert(`Selected City Time: ${timeSelectedCityFormatted}`);
+    document.getElementById("time3").textContent = timeSelectedCityFormatted;
 }
