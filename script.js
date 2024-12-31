@@ -2,18 +2,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const inputTime = document.getElementById("input-time");
     const inputDate = document.getElementById("input-date");
     const inputCity2 = document.getElementById("input-city2");
-   
+
     const now = new Date();
-    const year = now.getFullYear();
-    const month = String(now.getMonth() + 1).padStart(2, "0");
-    const day = String(now.getDate()).padStart(2, "0");
     const hours = String(now.getHours()).padStart(2, "0");
     const minutes = String(now.getMinutes()).padStart(2, "0");
+    const date = now.toISOString().split("T")[0];
 
-    // Use local time for the date
-    const localDate = `${year}-${month}-${day}`;
     inputTime.value = `${hours}:${minutes}`;
-    inputDate.value = localDate;
+    inputDate.value = date;
 
     const cities = [
         { name: "Kiritimati (GMT +14:00)", timeZone: "Pacific/Kiritimati" },
