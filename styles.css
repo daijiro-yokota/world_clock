@@ -90,7 +90,6 @@ select {
 }
 
 #controls button {
-    background-color: green;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -98,10 +97,6 @@ select {
     font-size: 16px;
     border: none;
     border-radius: 4px;
-}
-
-#controls button:hover {
-    background-color: green;
 }
 
 button {
@@ -115,7 +110,26 @@ button {
 }
 
 button:hover {
-    background-color: green;
+    background-color: darkgreen;
+}
+
+.button-group {
+    display: flex;
+    gap: 45px; 
+}
+
+.button-group button {
+    flex: 1; 
+    min-width: 150px;
+}
+
+.reset-button {
+    background-color: gray;
+    color: white;
+}
+
+.reset-button:hover {
+    background-color: darkgray;
 }
 
 .clock {

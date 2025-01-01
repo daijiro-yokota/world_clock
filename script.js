@@ -101,3 +101,9 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("timezone2").textContent = inputCity2;
     };
 });
+
+
+// Reset page function
+function resetPage() {
+    location.reload();
+}
