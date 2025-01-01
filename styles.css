@@ -8,7 +8,7 @@ body {
 }
 
 h1 {
-    margin-top: 20px;
+    margin-top: 25px;
     font-size: 2.5em;
     color: #444;
 }
@@ -176,16 +176,35 @@ footer p {
 
 @media (max-width: 600px) {
     h1 {
-        font-size: 2em;
+        font-size: 1.8em;
     }
 
     #controls,
     .clock {
-        width: 100%;
+        width: 92%;
+        margin: 10px auto;
+        padding: 15px;
     }
 
     #controls label,
     .clock label {
-        font-size: 0.9em;
+        font-size: 14px;
+    }
+
+    #controls input,
+    #controls select {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .button-group {
+        display: flex;
+        gap: 10px; /* Reduce gap to ensure buttons fit */
+        justify-content: space-between; /* Ensure buttons are spread out evenly */
+    }
+
+    .button-group button {
+        flex: 1;
+        max-width: 48%; /* Keep buttons next to each other with some spacing */
     }
 }
