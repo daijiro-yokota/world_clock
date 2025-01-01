@@ -92,16 +92,19 @@ document.addEventListener("DOMContentLoaded", () => {
         const timeCity2Formatted = timeCity2.toLocaleTimeString("en-US", timeOptions);
         const dateCity2Formatted = timeCity2.toLocaleDateString("en-US", dateOptions);
 
-        // Find city names for the timezones
-        const userCity = cities.find(city => city.timeZone === userTimeZone);
-        const theirCity = cities.find(city => city.timeZone === inputCity2);
-
         // Update the clocks and dates
         document.getElementById("time1").textContent = `${timeCity1Formatted} - ${dateCity1Formatted}`;
         document.getElementById("time2").textContent = `${timeCity2Formatted} - ${dateCity2Formatted}`;
 
         // Update the timezones
-        document.getElementById("timezone1").textContent = userCity ? userCity.name : userTimeZone;
-        document.getElementById("timezone2").textContent = theirCity ? theirCity.name : inputCity2;
+        document.getElementById("timezone1").textContent = userTimeZone;
+        document.getElementById("timezone2").textContent = inputCity2;
     };
 });
+
+
+// Reset page function
+function resetPage() {
+    location.reload();
+}
+
