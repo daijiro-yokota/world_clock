@@ -95,5 +95,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // Update the clocks and dates
         document.getElementById("time1").textContent = `${timeCity1Formatted} - ${dateCity1Formatted}`;
         document.getElementById("time2").textContent = `${timeCity2Formatted} - ${dateCity2Formatted}`;
+
+        // Update the timezones
+        document.getElementById("timezone1").textContent = userTimeZone;
+        document.getElementById("timezone2").textContent = inputCity2;
     };
 });
